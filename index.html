@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Colin — Workout</title>
+<title>Workout</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -315,7 +315,7 @@ nav button svg { width: 22px; height: 22px; }
 <!-- ====== DASHBOARD ====== -->
 <div class="page active" id="page-dash">
   <div class="page-header">
-    <h1 id="dash-greeting">Bonjour Colin 👋</h1>
+    <h1 id="dash-greeting">Bonjour 👋</h1>
     <p id="dash-date"></p>
   </div>
   <div class="next-session">
@@ -455,7 +455,7 @@ nav button svg { width: 22px; height: 22px; }
     <h3>À propos</h3>
     <div class="card" style="margin-bottom:0">
       <div style="font-size:13px;color:var(--text2);line-height:1.8">
-        <strong style="color:var(--text)">Colin — Workout Tracker v1.1</strong><br>
+        <strong style="color:var(--text)">Workout Tracker v1.1</strong><br>
         Application locale · données dans Chrome<br>
         <span style="color:var(--warn)">⚠ Exporte régulièrement tes données !</span>
       </div>
@@ -599,7 +599,7 @@ function renderDash(){
   const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
   document.getElementById('dash-date').textContent = `${DAYS[now.getDay()]} ${now.getDate()} ${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
   const h=now.getHours();
-  document.getElementById('dash-greeting').textContent = `${h<12?'Bonjour':h<18?'Bon après-midi':'Bonsoir'}, Colin 👋`;
+  document.getElementById('dash-greeting').textContent = `${h<12?'Bonjour':h<18?'Bon après-midi':'Bonsoir'} 👋`;
 
   const ms=[...db.metriques].sort((a,b)=>b.date.localeCompare(a.date));
   const lw=ms.find(m=>m.poids);
